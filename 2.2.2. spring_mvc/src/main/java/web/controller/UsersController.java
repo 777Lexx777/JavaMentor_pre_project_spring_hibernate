@@ -14,7 +14,6 @@ import javax.validation.Valid;
 public class UsersController {
     @Autowired
     private UserServiceImp userServiceImp;
-
     @GetMapping()
     public String printUsers(@RequestParam(value = "count", required = false) String count, Model model){
         if (count == null) { count = "0"; }

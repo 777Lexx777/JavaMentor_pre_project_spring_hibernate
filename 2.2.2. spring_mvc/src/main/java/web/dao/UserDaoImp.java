@@ -33,7 +33,6 @@ public class UserDaoImp implements UserDao {
         return  q.getResultList().stream().filter(user -> user.getId() == id)
                 .findAny().orElse(null);
     }
-
     @Override
     @Transactional
     public void saveUser(User user){ entityManager.persist(user); }
